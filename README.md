@@ -17,6 +17,7 @@ mkdir /data/
 cd /data
 apt-get install git
 git clone https://github.com/pcm-dpc/COVID-19-Verbali-CTS.git
+cd COVID-19-Verbali-CTS
 ```
 
 ## Verificare che non ci sia testo con pdfextract
