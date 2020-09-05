@@ -111,3 +111,115 @@ Riavviamo il webserver
  ```
 
 E ora sulla porta 80 c'è la directory /data/COVID-19-Verbali-CTS accessibile per condividere
+
+
+## Ma quanto testo c'è nei PDF originali?
+
+Poco, lo si può verificare in modo veloce rapportando il numero di linee di testo per PDF rispetto alla dimensione degli stessi:
+
+ ```
+
+ for file in `find 2020-* -name \*pdf` ; do  LINEE=`pdftotext $file - | sort -rn | uniq | wc -l` ; echo -n "Linee di testo: $LINEE - Dimensione: " ; du -sh $file ; done
+
+ ```
+
+Con questo output:
+ ```
+
+Linee di testo: 1 - Dimensione: 408K	2020-02/covid-19-cts-verbale-009-20200226.pdf
+Linee di testo: 1 - Dimensione: 160K	2020-02/covid-19-cts-verbale-005-20200218.pdf
+Linee di testo: 4 - Dimensione: 52K	2020-02/covid-19-cts-verbale-002-20200210.pdf
+Linee di testo: 1 - Dimensione: 460K	2020-02/covid-19-cts-verbale-007-20200222.pdf
+Linee di testo: 1 - Dimensione: 2.2M	2020-02/covid-19-cts-verbale-013-20200229.pdf
+Linee di testo: 130 - Dimensione: 1.3M	2020-02/covid-19-cts-verbale-011-20200227.pdf
+Linee di testo: 1 - Dimensione: 216K	2020-02/covid-19-cts-verbale-001-20200207.pdf
+Linee di testo: 8 - Dimensione: 196K	2020-02/covid-19-cts-verbale-010-20200227.pdf
+Linee di testo: 1 - Dimensione: 168K	2020-02/covid-19-cts-verbale-006-20200221.pdf
+Linee di testo: 1 - Dimensione: 952K	2020-02/covid-19-cts-verbale-003-20200212.pdf
+Linee di testo: 1 - Dimensione: 300K	2020-02/covid-19-cts-verbale-004-20200214.pdf
+Linee di testo: 1 - Dimensione: 804K	2020-02/covid-19-cts-verbale-008-20200224.pdf
+Linee di testo: 1 - Dimensione: 720K	2020-02/covid-19-cts-verbale-012-20200228.pdf
+Linee di testo: 1 - Dimensione: 2.4M	2020-03/covid-19-cts-verbale-017-20200304.pdf
+Linee di testo: 3 - Dimensione: 25M	2020-03/covid-19-cts-verbale-030-20200317.pdf
+Linee di testo: 1 - Dimensione: 1.9M	2020-03/covid-19-cts-verbale-016-20200303.pdf
+Linee di testo: 4 - Dimensione: 1.5M	2020-03/covid-19-cts-verbale-033-20200320.pdf
+Linee di testo: 3 - Dimensione: 11M	2020-03/covid-19-cts-verbale-027-20200314.pdf
+Linee di testo: 3 - Dimensione: 16M	2020-03/covid-19-cts-verbale-023-20200310.pdf
+Linee di testo: 3 - Dimensione: 13M	2020-03/covid-19-cts-verbale-021-20200307.pdf
+Linee di testo: 1 - Dimensione: 280K	2020-03/covid-19-cts-verbale-018-20200304.pdf
+Linee di testo: 1 - Dimensione: 5.1M	2020-03/covid-19-cts-verbale-019-20200305.pdf
+Linee di testo: 33 - Dimensione: 5.7M	2020-03/covid-19-cts-verbale-039-20200330.pdf
+Linee di testo: 1 - Dimensione: 4.6M	2020-03/covid-19-cts-verbale-022-20200309.pdf
+Linee di testo: 3 - Dimensione: 3.4M	2020-03/covid-19-cts-verbale-029-20200316.pdf
+Linee di testo: 3 - Dimensione: 32M	2020-03/covid-19-cts-verbale-032-20200319.pdf
+Linee di testo: 1 - Dimensione: 2.7M	2020-03/covid-19-cts-verbale-026-20200313.pdf
+Linee di testo: 8 - Dimensione: 5.2M	2020-03/covid-19-cts-verbale-040-20200331.pdf
+Linee di testo: 717 - Dimensione: 2.6M	2020-03/covid-19-cts-verbale-037-20200326.pdf
+Linee di testo: 1 - Dimensione: 3.0M	2020-03/covid-19-cts-verbale-020-20200306.pdf
+Linee di testo: 8 - Dimensione: 3.7M	2020-03/covid-19-cts-verbale-034-034bis-20200321.pdf
+Linee di testo: 7 - Dimensione: 3.2M	2020-03/covid-19-cts-verbale-035-20200324.pdf
+Linee di testo: 1 - Dimensione: 1008K	2020-03/covid-19-cts-verbale-015-20200302.pdf
+Linee di testo: 3 - Dimensione: 6.5M	2020-03/covid-19-cts-verbale-031-20200318.pdf
+Linee di testo: 3 - Dimensione: 7.6M	2020-03/covid-19-cts-verbale-028-20200315.pdf
+Linee di testo: 6 - Dimensione: 120K	2020-03/covid-19-cts-verbale-014-20200301.pdf
+Linee di testo: 512 - Dimensione: 3.2M	2020-03/covid-19-cts-verbale-036-20200325.pdf
+Linee di testo: 1033 - Dimensione: 2.9M	2020-03/covid-19-cts-verbale-038-20200327.pdf
+Linee di testo: 1 - Dimensione: 5.5M	2020-03/covid-19-cts-verbale-025-20200312.pdf
+Linee di testo: 3 - Dimensione: 12M	2020-03/covid-19-cts-verbale-024-20200311.pdf
+Linee di testo: 497 - Dimensione: 19M	2020-03/covid-19-cts-verbale-028-20200528.pdf
+Linee di testo: 92 - Dimensione: 4.9M	2020-04/covid-19-cts-verbale-053-20200416.pdf
+Linee di testo: 3467 - Dimensione: 13M	2020-04/covid-19-cts-verbale-057-20200422.pdf
+Linee di testo: 2503 - Dimensione: 5.5M	2020-04/covid-19-cts-verbale-049-20200409.pdf
+Linee di testo: 7 - Dimensione: 3.1M	2020-04/covid-19-cts-verbale-041-20200401.pdf
+Linee di testo: 3 - Dimensione: 25M	2020-04/covid-19-cts-verbale-054-20200417.pdf
+Linee di testo: 595 - Dimensione: 1.6M	2020-04/covid-19-cts-verbale-048-20200408.pdf
+Linee di testo: 539 - Dimensione: 6.9M	2020-04/covid-19-cts-verbale-045-20200406.pdf
+Linee di testo: 1 - Dimensione: 12M	2020-04/covid-19-cts-verbale-052-20200415.pdf
+Linee di testo: 787 - Dimensione: 3.8M	2020-04/covid-19-cts-verbale-060-20200427.pdf
+Linee di testo: 11 - Dimensione: 2.3M	2020-04/covid-19-cts-verbale-046-20200407.pdf
+Linee di testo: 1076 - Dimensione: 8.7M	2020-04/covid-19-cts-verbale-043-20200403.pdf
+Linee di testo: 83 - Dimensione: 3.2M	2020-04/covid-19-cts-verbale-044-20200404.pdf
+Linee di testo: 1 - Dimensione: 37M	2020-04/covid-19-cts-verbale-056-20200420.pdf
+Linee di testo: 9 - Dimensione: 4.3M	2020-04/covid-19-cts-verbale-058-20200423.pdf
+Linee di testo: 214 - Dimensione: 5.1M	2020-04/covid-19-cts-verbale-063-20200430.pdf
+Linee di testo: 8 - Dimensione: 1.8M	2020-04/covid-19-cts-verbale-042-20200402.pdf
+Linee di testo: 4 - Dimensione: 11M	2020-04/covid-19-cts-verbale-055-20200418.pdf
+Linee di testo: 230 - Dimensione: 8.5M	2020-04/covid-19-cts-verbale-051-20200414.pdf
+Linee di testo: 4842 - Dimensione: 3.7M	2020-04/covid-19-cts-verbale-062-20200429.pdf
+Linee di testo: 1757 - Dimensione: 6.4M	2020-04/covid-19-cts-verbale-050-20200411.pdf
+Linee di testo: 1 - Dimensione: 4.2M	2020-04/covid-19-cts-verbale-047-20200407.pdf
+Linee di testo: 1835 - Dimensione: 12M	2020-04/covid-19-cts-verbale-059-2020042425.pdf
+Linee di testo: 2580 - Dimensione: 7.5M	2020-04/covid-19-cts-verbale-061-20200428.pdf
+Linee di testo: 1766 - Dimensione: 8.9M	2020-05/covid-19-cts-verbale-083-20200529.pdf
+Linee di testo: 3 - Dimensione: 4.6M	2020-05/covid-19-cts-verbale-069-20200511.pdf
+Linee di testo: 1475 - Dimensione: 4.7M	2020-05/covid-19-cts-verbale-072-20200513.pdf
+Linee di testo: 122 - Dimensione: 5.4M	2020-05/covid-19-cts-verbale-064-20200502.pdf
+Linee di testo: 497 - Dimensione: 19M	2020-05/covid-19-cts-verbale-082-20200528.pdf
+Linee di testo: 3 - Dimensione: 22M	2020-05/covid-19-cts-verbale-076-20200518.pdf
+Linee di testo: 258 - Dimensione: 8.8M	2020-05/covid-19-cts-verbale-080-20200525.pdf
+Linee di testo: 8 - Dimensione: 4.5M	2020-05/covid-19-cts-verbale-070-20200511.pdf
+Linee di testo: 1635 - Dimensione: 14M	2020-05/covid-19-cts-verbale-075-20200516.pdf
+Linee di testo: 1141 - Dimensione: 7.4M	2020-05/covid-19-cts-verbale-071-20200512.pdf
+Linee di testo: 1818 - Dimensione: 6.7M	2020-05/covid-19-cts-verbale-073-20200514.pdf
+Linee di testo: 1097 - Dimensione: 11M	2020-05/covid-19-cts-verbale-068-2020050810.pdf
+Linee di testo: 3 - Dimensione: 2.3M	2020-05/covid-19-cts-verbale-081-20200526.pdf
+Linee di testo: 3 - Dimensione: 9.7M	2020-05/covid-19-cts-verbale-077-20200519.pdf
+Linee di testo: 1425 - Dimensione: 17M	2020-05/covid-19-cts-verbale-065-20200503.pdf
+Linee di testo: 1435 - Dimensione: 9.8M	2020-05/covid-19-cts-verbale-066-202005040506.pdf
+Linee di testo: 332 - Dimensione: 2.9M	2020-05/covid-19-cts-verbale-067-20200507.pdf
+Linee di testo: 3 - Dimensione: 8.3M	2020-05/covid-19-cts-verbale-079-20200522.pdf
+Linee di testo: 4 - Dimensione: 9.8M	2020-05/covid-19-cts-verbale-078-20200521.pdf
+Linee di testo: 3240 - Dimensione: 13M	2020-05/covid-19-cts-verbale-074-20200515.pdf
+Linee di testo: 71 - Dimensione: 7.3M	2020-06/covid-19-cts-verbale-089-20200616.pdf
+Linee di testo: 11 - Dimensione: 16M	2020-06/covid-19-cts-verbale-088-20200612.pdf
+Linee di testo: 11 - Dimensione: 2.9M	2020-06/covid-19-cts-verbale-085-20200603.pdf
+Linee di testo: 53 - Dimensione: 18M	2020-06/covid-19-cts-verbale-090-20200622.pdf
+Linee di testo: 174 - Dimensione: 7.4M	2020-06/covid-19-cts-verbale-084-20200603.pdf
+Linee di testo: 59 - Dimensione: 7.4M	2020-06/covid-19-cts-verbale-086-20200605.pdf
+Linee di testo: 3 - Dimensione: 9.9M	2020-06/covid-19-cts-verbale-091-20200623.pdf
+Linee di testo: 63 - Dimensione: 3.8M	2020-06/covid-19-cts-verbale-087-20200608.pdf
+Linee di testo: 4377 - Dimensione: 15M	2020-07/covid-19-cts-verbale-092-2020070102.pdf
+Linee di testo: 107 - Dimensione: 7.0M	2020-07/covid-19-cts-verbale-093-20200703.pdf
+Linee di testo: 303 - Dimensione: 7.6M	2020-07/covid-19-cts-verbale-094-20200707.pdf
+Linee di testo: 635 - Dimensione: 18M	2020-07/covid-19-cts-verbale-095-2020071620.pdf
+ ```
