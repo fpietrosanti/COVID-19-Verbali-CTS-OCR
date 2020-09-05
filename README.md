@@ -79,9 +79,8 @@ find 2020-0* -printf '%p' -name '*.pdf' -exec ocrmypdf --force-ocr -l ita '{}' '
 ```
 
 # NOTE
-Solo alcuni dei PDF parrebbero contenere del testo, sarebbe da fare elenco analitico.
 
-Gli OCR opensource lanciati così alla buona spesso non si comportano una meraviglia, un batch processing con un OCR commerciale potrebbe essere ideale.
+Gli OCR opensource lanciati così alla buona spesso non si comportano una meraviglia, un batch processing con un OCR commerciale potrebbe essere anche interessante.
 
 Il tricks d'usare Google Drive e uno a uno a mano convertirli in Google Docs, per poi pubblicarli, non sarebbe affatto male da fare (ma non ho tempo, se qualcuno volesse)
 
@@ -131,7 +130,7 @@ markdown elenco-verbali-ocr.md > index.html
 
 ## Ma quanto testo c'è nei PDF originali?
 
-Nella maggioranza dei PDF complicati l'accessibilità testuale è nulla.
+Nella maggioranza dei PDF pubblicati l'accessibilità testuale è scarsina, c'è poco testo ricercabile.
 
 Per renderci conto di quanto testo c'è in ogni pdf, lo si può verificare in modo veloce rapportando il numero di linee di testo per PDF rispetto alla dimensione dei file:
 
