@@ -75,4 +75,8 @@ find 2020-0* -printf '%p' -name '*.pdf' -exec ocrmypdf --force-ocr -l ita '{}' '
 ```
 
 # NOTE
-Alcuni dei PDF parrebbero contenere alcuni brandelli di testo, sarebbe da fare elenco.
+Solo alcuni dei PDF parrebbero contenere del testo, sarebbe da fare elenco analitico.
+
+Gli OCR opensource lanciati così alla buona spesso non si comportano una meraviglia, un batch processing con un OCR commerciale potrebbe essere ideale.
+
+Il tricks d'usare Google Drive e uno a uno a mano convertirli in Google Docs, per poi pubblicarli, non sarebbe affatto male da fare (ma non ho tempo, se qualcuno volesse)
