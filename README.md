@@ -6,7 +6,7 @@ Non è possibile cercare stringhe di testo, fare copia e incolla, né i suoi con
 
 Di seguito uno sforzo di un paio d'ore, sarebbe ideale se qualcuno lo automatizzasse o PDCM stessa pubblicasse in modo accessibile.
 
-Sono accessibili i PDF con testo su http://51.15.85.131/ (alle 21.48 del 5 Settembre sta processando la cartella 2020-03) .
+Sono accessibili i PDF con testo su http:/verbalictscovid.infosecurity.ch/ (alle 21.48 del 5 Settembre sta processando la cartella 2020-03) .
 
 In seguito le istruzioni per replicare il setup, magari automatizzarlo sui nuovi file, indicizzandoli, etc
 
