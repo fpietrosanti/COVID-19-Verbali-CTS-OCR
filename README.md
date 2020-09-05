@@ -130,7 +130,9 @@ markdown elenco-verbali-ocr.md > index.html
 
 ## Ma quanto testo c'è nei PDF originali?
 
-Poco, lo si può verificare in modo veloce rapportando il numero di linee di testo per PDF rispetto alla dimensione degli stessi:
+Nella maggioranza dei PDF complicati l'accessibilità testuale è nulla.
+
+Per renderci conto di quanto testo c'è in ogni pdf, lo si può verificare in modo veloce rapportando il numero di linee di testo per PDF rispetto alla dimensione dei file:
 
  ```
 
