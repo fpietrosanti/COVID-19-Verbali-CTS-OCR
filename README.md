@@ -86,3 +86,28 @@ Gli OCR opensource lanciati così alla buona spesso non si comportano una meravi
 Il tricks d'usare Google Drive e uno a uno a mano convertirli in Google Docs, per poi pubblicarli, non sarebbe affatto male da fare (ma non ho tempo, se qualcuno volesse)
 
 Sarebbe bello fare anche un bel pdf2html per vedere cosa esce fuori.
+
+## Rendi accessibili i PDF con OCR con un webserver al volo
+Installiamo lighthttpd che è un webserver piccino
+
+```
+apt-get install lighttpd
+```
+
+Cambiamogli la webroot alla directory con i PDF del repo Git PDCM e abilitiamogli il directory listing
+
+```
+vim /etc/lighttpd/lighttpd.conf
+```
+
+```
+server.document-root        = "/data/COVID-19-Verbali-CTS"
+server.dir-listing = "enable"
+```
+
+Riavviamo il webserver
+```
+ /etc/init.d/lighttpd restart
+ ```
+
+E ora sulla porta 80 c'è la directory /data/COVID-19-Verbali-CTS accessibile per condividere
