@@ -6,6 +6,8 @@ Non è possibile cercare stringhe di testo, fare copia e incolla, né i suoi con
 
 Di seguito uno sforzo di un paio d'ore, sarebbe ideale se qualcuno lo automatizzasse o PDCM stessa pubblicasse in modo accessibile.
 
+Sono accessibili i PDF con testo su http://51.15.85.131/ (alle 21.48 del 5 Settembre sta processando la cartella 2020-03) .
+
 ## Installare una Debian Buster
 
 Io ho preso un VPS da 5 euro al mese con una Debian Buster da scaleway.com
@@ -80,3 +82,5 @@ Solo alcuni dei PDF parrebbero contenere del testo, sarebbe da fare elenco anali
 Gli OCR opensource lanciati così alla buona spesso non si comportano una meraviglia, un batch processing con un OCR commerciale potrebbe essere ideale.
 
 Il tricks d'usare Google Drive e uno a uno a mano convertirli in Google Docs, per poi pubblicarli, non sarebbe affatto male da fare (ma non ho tempo, se qualcuno volesse)
+
+Sarebbe bello fare anche un bel pdf2html per vedere cosa esce fuori.
