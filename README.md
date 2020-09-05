@@ -8,6 +8,8 @@ Di seguito uno sforzo di un paio d'ore, sarebbe ideale se qualcuno lo automatizz
 
 Sono accessibili i PDF con testo su http://51.15.85.131/ (alle 21.48 del 5 Settembre sta processando la cartella 2020-03) .
 
+In seguito le istruzioni per replicare il setup, magari automatizzarlo sui nuovi file, indicizzandoli, etc
+
 ## Installare una Debian Buster
 
 Io ho preso un VPS da 5 euro al mese con una Debian Buster da scaleway.com
