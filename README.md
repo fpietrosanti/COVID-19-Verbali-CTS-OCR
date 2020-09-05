@@ -122,6 +122,7 @@ sed -e 's?https://raw.githubusercontent.com/pcm-dpc/COVID-19-Verbali-CTS/master/
 
 Traduciamo i lmarkdown nell'index.html
  ```
+apt-get install git
 markdown elenco-verbali-ocr.md > index.html
 
  ```
