@@ -112,6 +112,21 @@ Riavviamo il webserver
 
 E ora sulla porta 80 c'è la directory /data/COVID-19-Verbali-CTS accessibile per condividere
 
+## Creiamo un indice HTML per aiutare i motori di ricerca
+
+Cambiamo l'url di download dei pdf dal file elenco-verbali.md in markdown nel file  elenco-verbali-ocr.md 
+
+ ```
+sed -e 's?https://raw.githubusercontent.com/pcm-dpc/COVID-19-Verbali-CTS/master/?http://51.15.85.131/?' -e 's?COVID-19 Verbali CTS?COVID-19 Verbali CTS con PDF con testo?'  elenco-verbali.md > elenco-verbali-ocr.md
+ ```
+
+Traduciamo i lmarkdown nell'index.html
+ ```
+markdown elenco-verbali-ocr.md > index.html
+
+ ```
+
+
 
 ## Ma quanto testo c'è nei PDF originali?
 
