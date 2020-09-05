@@ -60,14 +60,19 @@ Producer            : PDFsharp 1.50.4589 (www.pdfsharp.com)
 
 ## Installare OCRmyPDF, che usa l'opensource OCR Engine Tesseract e language pack italiano
 
-Da https://github.com/jbarlow83/OCRmyPDF
+Oltre a tesseract (usato da ocrmypdf) ci sono anche altri OCR Engine opensource da provare (kraken, Ocrad, calamari) e volendo anche soluzioni Cloud (caricare i PDF su Google Drive e quindi cliccare "apri con google docs" e quindi condividere il file su cui Google avrà fatto OCR automaticamente) oltre ovviamente a soluzioni commerciali (abby fine reader fra i migliori per i documenti).
+
+Per semplicità del PoC da completare prima di cena userò OCRmyPDF https://github.com/jbarlow83/OCRmyPDF
 
 ```
 apt-get install ocrmypdf tesseract-ocr-ita
 ```
 
-## Eseguire su tutti i file pdf l'OCR ocrmypdf 
+## Eseguire su tutti i file pdf l'OCR ocrmypdf basato su tesseract
 
 ```
 find 2020-0* -printf '%p' -name '*.pdf' -exec ocrmypdf --force-ocr -l ita '{}' '{}' \;
 ```
+
+# NOTE
+Alcuni dei PDF parrebbero contenere alcuni brandelli di testo, sarebbe da fare elenco.
