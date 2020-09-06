@@ -10,6 +10,8 @@ Sono accessibili i PDF con testo ricercabile su http://verbalictscovid.infosecur
 
 In seguito le istruzioni per replicare il setup, magari automatizzarlo sui nuovi file, indicizzandoli, etc
 
+Da leggere l'incredibile storia della battaglia legale della Fondazione Einaudi per richiederne la pubblicazione tramite l'uso del FOIA https://www.fondazioneluigieinaudi.it/ecco-la-storia-dellaccesso-agli-atti-del-comitato-tecnico-scientifico/ 
+
 ## Installare una Debian Buster
 
 Io ho preso un VPS da 5 euro al mese con una Debian Buster da scaleway.com
