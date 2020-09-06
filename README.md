@@ -126,7 +126,11 @@ markdown elenco-verbali-ocr.md > index.html
 
  ```
 
+## Crea Google Custom Search Engine
 
+Attivato Google CSE, per successivo crawling da google dei PDF con già OCR.
+
+https://cse.google.com/cse?cx=c0bbeb66c5e5e986a
 
 ## Ma quanto testo c'è nei PDF originali?
 
