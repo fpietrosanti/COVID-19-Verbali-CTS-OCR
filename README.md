@@ -8,6 +8,8 @@ Di seguito uno sforzo di un paio d'ore, sarebbe ideale se qualcuno lo automatizz
 
 Sono accessibili i PDF con testo ricercabile su http://verbalictscovid.infosecurity.ch/ (alle 21.48 del 5 Settembre sta processando la cartella 2020-03) .
 
+*UPDATE* Sabato 21 Novembre 2020: Il VPS è stato spent, Ondata ha fatto un egregio lavoro http://blog.ondata.it/rendere-ricercabile-il-xxi-secolo/
+
 In seguito le istruzioni per replicare il setup, magari automatizzarlo sui nuovi file, indicizzandoli, etc
 
 Da leggere l'incredibile storia della battaglia legale della Fondazione Einaudi per richiederne la pubblicazione tramite l'uso del FOIA https://www.fondazioneluigieinaudi.it/ecco-la-storia-dellaccesso-agli-atti-del-comitato-tecnico-scientifico/ 
